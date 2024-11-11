@@ -1,19 +1,19 @@
 # Template file for 'niri'
 pkgname=niri
-version=0.1.8
+version=0.1.9
 revision=1
 build_style=cargo
 configure_args="--no-default-features --features dinit,dbus,xdp-gnome-screencast"
 hostmakedepends="pkg-config"
-makedepends="eudev-libudev-devel libxkbcommon-devel libinput-devel pipewire-devel pango-devel libseat-devel clang libgbm-devel wayland-devel dbus-devel cairo-devel"
-depends="eudev-libudev libxkbcommon libinput libpipewire pango libseat libgbm wayland dbus cairo elogind mesa-dri"
+makedepends="eudev-libudev-devel libdisplay-info-devel libxkbcommon-devel libinput-devel pipewire-devel pango-devel libseat-devel clang libgbm-devel wayland-devel dbus-devel cairo-devel"
+depends="eudev-libudev libdisplay-info libxkbcommon libinput libpipewire pango libseat libgbm wayland dbus cairo elogind mesa-dri"
 short_desc="Scrollable-tiling Wayland compositor"
 maintainer="Max D <d3m1gd@gmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/YaLTeR/niri"
 changelog="https://github.com/YaLTeR/niri/releases"
 distfiles="https://github.com/YaLTeR/niri/archive/refs/tags/v${version}.tar.gz"
-checksum=070d6991d863161c85f28522924b3118b58a53d8882913a412148bb32206209e
+checksum=70427efcde50a9d262c341befbd4df4e24557afd8311753bf912a4be1bf243a7
 
 post_install() {
 	vconf resources/default-config.kdl niri/config.kdl
